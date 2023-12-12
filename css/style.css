@@ -433,7 +433,12 @@ a {
         padding-top: 25px;
     }
 }
-
+/* Fix word-break on filters btn span (less than 795px) */
+@media (max-width: 795px) {
+    .filters-btn-container .filters-btn {
+        padding: 4px 15px 4px 15px;
+    }
+}
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     .main-wrapper {
