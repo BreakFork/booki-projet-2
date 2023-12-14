@@ -553,7 +553,6 @@ a {
     }
     .filters-btn span {
         font-size: 14px;
-        text-wrap: nowrap;
     }
     .filters-btn-container {
         display: grid;
