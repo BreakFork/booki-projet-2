@@ -226,38 +226,46 @@ a {
     flex-direction: column;
     gap: 30px;
 }
-.hebergements .card-rating i {
-    font-size: 13.25px;
-}
 /* HEBERGEMENTS-CARDS/////////////////////////// */
+.hebergements-cards a:nth-child(1) {grid-area: img1;}
+.hebergements-cards a:nth-child(2) {grid-area: img2;}
+.hebergements-cards a:nth-child(3) {grid-area: img3;}
+.hebergements-cards a:nth-child(4) {grid-area: img4;}
+.hebergements-cards a:nth-child(5) {grid-area: img5;}
+.hebergements-cards a:nth-child(6) {grid-area: img6;}
 .hebergements-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250.33px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6";
     gap: 30px
 }
 .hebergements-cards .card {
+    height: 100%;
     padding: 5px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 9px;
 }
 .hebergements-cards img {
-    height: 124px;
+    max-height: 124px;
+    min-height: 124px;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
-.hebergements-cards .card-content h3, .hebergements-cards .card-content p {
-    padding: 0;
-    margin: 0;
-}
-.hebergements-cards .card-content h3 {
-   margin-block: 5px; 
-}
 .hebergements-cards .card-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 4px;
-    padding: 0px 15px 0px 15px; 
+    padding: 0px 15px 0px 15px;
+}
+.hebergements-cards .card-title, .hebergements-cards .card-subtitle, .hebergements-cards .card-rating {
+    padding: 0;
+    margin: 0;
 }
 .hebergements .card-subtitle {
     font-size: 14px;
@@ -559,6 +567,16 @@ a {
         gap: 15px;
     }
     .hebergements-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "img1" 
+        "img2" 
+        "img3"
+        "img4" 
+        "img5" 
+        "img6";
         gap: 15px;
     }
     .hebergements-cards img {
